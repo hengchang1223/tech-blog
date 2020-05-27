@@ -91,11 +91,18 @@ Given two strings S and T, return if they are equal when both are typed into emp
     
   <div class="entry">
     <h2 id="description">Description:</h2>
-<p>Given two strings S and T, return if they are equal when both are typed into empty text editors. # means a backspace character.</p>
+<p>Given two strings <code class="language-plaintext highlighter-rouge">S</code> and <code class="language-plaintext highlighter-rouge">T</code>, return if they are equal when both are typed into empty text editors. <code class="language-plaintext highlighter-rouge">#</code> means a backspace character.</p>
 
 <p>Note that after backspacing an empty text, the text will continue empty.</p>
 
 <h2 id="example">Example:</h2>
+<p>Input: <code class="language-plaintext highlighter-rouge">S = "ab#c", T = "ad#c"</code></p>
+
+<p>Output: <code class="language-plaintext highlighter-rouge">True</code></p>
+
+<p>Input: <code class="language-plaintext highlighter-rouge">S = "ab##", T = "c#d#"</code></p>
+
+<p>Output: <code class="language-plaintext highlighter-rouge">True</code></p>
 
 <h2 id="solution-explanation">Solution Explanation:</h2>
 

@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-27T14:08:42-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hengchang’s Tech Blog</title><subtitle>Victory Loves Preparation.</subtitle><author><name>Hengchang Hu</name></author><entry><title type="html">LeetCode 844. Backspace String Compare (April Challenge Day #9)</title><link href="http://localhost:4000/apr9/" rel="alternate" type="text/html" title="LeetCode 844. Backspace String Compare (April Challenge Day #9)" /><published>2020-04-09T00:00:00-04:00</published><updated>2020-04-09T00:00:00-04:00</updated><id>http://localhost:4000/apr9</id><content type="html" xml:base="http://localhost:4000/apr9/">&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
-&lt;p&gt;Given two strings S and T, return if they are equal when both are typed into empty text editors. # means a backspace character.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-05-27T14:15:16-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hengchang’s Tech Blog</title><subtitle>Victory Loves Preparation.</subtitle><author><name>Hengchang Hu</name></author><entry><title type="html">LeetCode 844. Backspace String Compare (April Challenge Day #9)</title><link href="http://localhost:4000/apr9/" rel="alternate" type="text/html" title="LeetCode 844. Backspace String Compare (April Challenge Day #9)" /><published>2020-04-09T00:00:00-04:00</published><updated>2020-04-09T00:00:00-04:00</updated><id>http://localhost:4000/apr9</id><content type="html" xml:base="http://localhost:4000/apr9/">&lt;h2 id=&quot;description&quot;&gt;Description:&lt;/h2&gt;
+&lt;p&gt;Given two strings &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;T&lt;/code&gt;, return if they are equal when both are typed into empty text editors. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&lt;/code&gt; means a backspace character.&lt;/p&gt;
 
 &lt;p&gt;Note that after backspacing an empty text, the text will continue empty.&lt;/p&gt;
 
 &lt;h2 id=&quot;example&quot;&gt;Example:&lt;/h2&gt;
+&lt;p&gt;Input: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S = &quot;ab#c&quot;, T = &quot;ad#c&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Output: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;True&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Input: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S = &quot;ab##&quot;, T = &quot;c#d#&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Output: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;True&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;solution-explanation&quot;&gt;Solution Explanation:&lt;/h2&gt;
 
