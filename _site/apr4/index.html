@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LeetCode 283. Move Zeroes (April Challenge Day #4) – Hengchang's Tech Blog – Victory Loves Preparation.</title>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="LeetCode 283. Move Zeroes (April Challenge Day #4)" />
+<meta name="author" content="Hengchang Hu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Description: Given an array nums, write a function to move all 0’s to the end of it while maintaining the relative order of the non-zero elements." />
+<meta property="og:description" content="Description: Given an array nums, write a function to move all 0’s to the end of it while maintaining the relative order of the non-zero elements." />
+<link rel="canonical" href="http://localhost:4000/tech_blog/apr4/" />
+<meta property="og:url" content="http://localhost:4000/tech_blog/apr4/" />
+<meta property="og:site_name" content="Hengchang’s Tech Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-04T00:00:00-04:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/tech_blog/apr4/","headline":"LeetCode 283. Move Zeroes (April Challenge Day #4)","dateModified":"2020-04-04T00:00:00-04:00","datePublished":"2020-04-04T00:00:00-04:00","author":{"@type":"Person","name":"Hengchang Hu"},"description":"Description: Given an array nums, write a function to move all 0’s to the end of it while maintaining the relative order of the non-zero elements.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tech_blog/apr4/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+        <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta property="og:description" content="Description:
+Given an array nums, write a function to move all 0’s to the end of it while maintaining the relative order of the non-zero elements.
+
+" />
+    
+    <meta name="author" content="Hengchang's Tech Blog" />
+
+    
+    <meta property="og:title" content="LeetCode 283. Move Zeroes (April Challenge Day #4)" />
+    <meta property="twitter:title" content="LeetCode 283. Move Zeroes (April Challenge Day #4)" />
+    
+
+    
+    <meta property="og:image" content="http://localhost:4000"/>
+    <meta property="twitter:image" content="http://localhost:4000"/>
+    
+    <meta property="og:site_name" content="Amit Merchant - Software Engineer"/>
+
+
+    <link rel="stylesheet" type="text/css" href="/tech_blog/assets/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Hengchang's Tech Blog - Victory Loves Preparation." href="/tech_blog/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/apr4/" />
+
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/tech_blog/images/favicon-32x32.png">
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="/tech_blog/" class="site-avatar"><img src="/tech_blog" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/tech_blog/">Hengchang's Tech Blog</a></h1>
+              <p class="site-description">Victory Loves Preparation.</p> 
+            </div>
+
+            <nav>
+              <a href="/tech_blog/">Home</a>
+              <a href="/tech_blog/search">Search</a>
+              <a href="/tech_blog/about">About</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="post detailed">
+  <h1>LeetCode 283. Move Zeroes (April Challenge Day #4)</h1>
+
+  <div>
+    <p class="author_title">Hengchang Hu  ·  April  4, 2020</p>
+    
+    <div class="post-tags">
+      
+      
+        <a href="/tech_blog/categories/#April Challenge">April Challenge</a>
+        
+      
+    </div>
+  </div>
+    
+  <div class="entry">
+    <h2 id="description">Description:</h2>
+<p>Given an array nums, write a function to move all 0’s to the end of it while maintaining the relative order of the non-zero elements.</p>
+
+<h2 id="example">Example:</h2>
+<p>Input: <code class="language-plaintext highlighter-rouge">[0,1,0,3,12]</code></p>
+
+<p>Output: <code class="language-plaintext highlighter-rouge">[1,3,12,0,0]</code></p>
+
+<h2 id="solution-explanation">Solution Explanation:</h2>
+<p>Very similar to <a href="/tech_blog/sorting/">Dutch Flag</a> problem, maintain two pointers and switch positions while one pointer points to the boundary of two kinds of elements, the other loops through the whole array to find elements that meet some conditions of switching.</p>
+
+<h2 id="solution">Solution:</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">moveZeroes</span><span class="p">(</span><span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">p2</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">p2</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">p2</span><span class="p">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">nums</span><span class="p">[</span><span class="n">p1</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">p2</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">p2</span><span class="p">],</span> <span class="n">nums</span><span class="p">[</span><span class="n">p1</span><span class="p">]</span>
+            <span class="n">p1</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">p2</span> <span class="o">+=</span> <span class="mi">1</span>
+</code></pre></div></div>
+
+  </div>
+
+  <div>
+    <p><span class="share-box">Share:</span> <a href="http://twitter.com/share?text=LeetCode 283. Move Zeroes (April Challenge Day #4)&url=http://localhost:4000/apr4/" target="_blank">Twitter</a>, <a href="https://www.facebook.com/sharer.php?u=http://localhost:4000/apr4/" target="_blank">Facebook</a></p>
+  </div>
+
+  <!--<div class="date">
+    Written on April  4, 2020
+  </div>-->
+
+  
+</article>
+
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            
+<a href="mailto:hengchang1223@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/hengchang1223"><i class="svg-icon github"></i></a>
+
+
+
+
+
+
+
+
+
+
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-43339302-11', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/tech_blog/apr4/',
+		  'title': 'LeetCode 283. Move Zeroes (April Challenge Day #4)'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+  </body>
+</html>

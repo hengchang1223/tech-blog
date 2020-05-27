@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LeetCode 88. Merge Sorted Array – Hengchang's Tech Blog – Victory Loves Preparation.</title>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="LeetCode 88. Merge Sorted Array" />
+<meta name="author" content="Hengchang Hu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Description: Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array." />
+<meta property="og:description" content="Description: Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array." />
+<link rel="canonical" href="http://localhost:4000/tech_blog/lc88/" />
+<meta property="og:url" content="http://localhost:4000/tech_blog/lc88/" />
+<meta property="og:site_name" content="Hengchang’s Tech Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-05T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/tech_blog/lc88/","headline":"LeetCode 88. Merge Sorted Array","dateModified":"2020-01-05T00:00:00-05:00","datePublished":"2020-01-05T00:00:00-05:00","author":{"@type":"Person","name":"Hengchang Hu"},"description":"Description: Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tech_blog/lc88/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+        <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta property="og:description" content="Description:
+Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+
+" />
+    
+    <meta name="author" content="Hengchang's Tech Blog" />
+
+    
+    <meta property="og:title" content="LeetCode 88. Merge Sorted Array" />
+    <meta property="twitter:title" content="LeetCode 88. Merge Sorted Array" />
+    
+
+    
+    <meta property="og:image" content="http://localhost:4000"/>
+    <meta property="twitter:image" content="http://localhost:4000"/>
+    
+    <meta property="og:site_name" content="Amit Merchant - Software Engineer"/>
+
+
+    <link rel="stylesheet" type="text/css" href="/tech_blog/assets/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Hengchang's Tech Blog - Victory Loves Preparation." href="/tech_blog/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/lc88/" />
+
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/tech_blog/images/favicon-32x32.png">
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="/tech_blog/" class="site-avatar"><img src="/tech_blog" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/tech_blog/">Hengchang's Tech Blog</a></h1>
+              <p class="site-description">Victory Loves Preparation.</p> 
+            </div>
+
+            <nav>
+              <a href="/tech_blog/">Home</a>
+              <a href="/tech_blog/search">Search</a>
+              <a href="/tech_blog/about">About</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="post detailed">
+  <h1>LeetCode 88. Merge Sorted Array</h1>
+
+  <div>
+    <p class="author_title">Hengchang Hu  ·  January  5, 2020</p>
+    
+    <div class="post-tags">
+      
+      
+        <a href="/tech_blog/categories/#Two Pointers">Two Pointers</a>
+        
+      
+    </div>
+  </div>
+    
+  <div class="entry">
+    <h2 id="description">Description:</h2>
+<p>Given two sorted integer arrays <code class="language-plaintext highlighter-rouge">nums1</code> and <code class="language-plaintext highlighter-rouge">nums2</code>, merge <code class="language-plaintext highlighter-rouge">nums2</code> into <code class="language-plaintext highlighter-rouge">nums1</code> as one sorted array.</p>
+
+<h2 id="example">Example:</h2>
+<p>Input: <code class="language-plaintext highlighter-rouge">nums1 = [1,2,3,0,0,0]  nums2 = [2,5,6]</code></p>
+
+<p>Output: <code class="language-plaintext highlighter-rouge">[1,2,2,3,5,6]</code></p>
+
+<h2 id="solution-explanation">Solution Explanation:</h2>
+<p>Use three pointers, <code class="language-plaintext highlighter-rouge">p1</code> points to <code class="language-plaintext highlighter-rouge">3</code> which is <code class="language-plaintext highlighter-rouge">nums1[2]</code>, <code class="language-plaintext highlighter-rouge">p2</code> points to <code class="language-plaintext highlighter-rouge">6</code> which is <code class="language-plaintext highlighter-rouge">nums2[2]</code>. By comparing which is bigger to decide which element will go to the end of the <code class="language-plaintext highlighter-rouge">nums1</code>. Use another pointer <code class="language-plaintext highlighter-rouge">p3</code> to keep track of which position will be filled into in <code class="language-plaintext highlighter-rouge">nums1</code>.</p>
+
+<h2 id="solution">Solution:</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">nums1</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">nums2</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">m</span> <span class="o">+</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">p1</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">p2</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">nums1</span><span class="p">[</span><span class="n">p1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">p2</span><span class="p">]:</span>
+            <span class="n">nums1</span><span class="p">[</span><span class="n">p3</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums1</span><span class="p">[</span><span class="n">p1</span><span class="p">]</span>
+            <span class="n">p1</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">nums1</span><span class="p">[</span><span class="n">p3</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">p2</span><span class="p">]</span>
+            <span class="n">p2</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="n">p3</span> <span class="o">-=</span> <span class="mi">1</span>
+
+    <span class="k">if</span> <span class="n">p1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">while</span> <span class="n">p2</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">nums1</span><span class="p">[</span><span class="n">p3</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums2</span><span class="p">[</span><span class="n">p2</span><span class="p">]</span>
+            <span class="n">p3</span> <span class="o">-=</span> <span class="mi">1</span>
+            <span class="n">p2</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">nums1</span>
+</code></pre></div></div>
+
+
+  </div>
+
+  <div>
+    <p><span class="share-box">Share:</span> <a href="http://twitter.com/share?text=LeetCode 88. Merge Sorted Array&url=http://localhost:4000/lc88/" target="_blank">Twitter</a>, <a href="https://www.facebook.com/sharer.php?u=http://localhost:4000/lc88/" target="_blank">Facebook</a></p>
+  </div>
+
+  <!--<div class="date">
+    Written on January  5, 2020
+  </div>-->
+
+  
+</article>
+
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            
+<a href="mailto:hengchang1223@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/hengchang1223"><i class="svg-icon github"></i></a>
+
+
+
+
+
+
+
+
+
+
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-43339302-11', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/tech_blog/lc88/',
+		  'title': 'LeetCode 88. Merge Sorted Array'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+  </body>
+</html>

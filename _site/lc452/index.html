@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LeetCode 452. Minimum Number of Arrows to Burst Balloons – Hengchang's Tech Blog – Victory Loves Preparation.</title>
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="LeetCode 452. Minimum Number of Arrows to Burst Balloons" />
+<meta name="author" content="Hengchang Hu" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Description: There are a number of spherical balloons spread in two-dimensional space. For each balloon, provided input is the start and end coordinates of the horizontal diameter. Since it’s horizontal, y-coordinates don’t matter and hence the x-coordinates of start and end of the diameter suffice. Start is always smaller than end. There will be at most 10^4 balloons." />
+<meta property="og:description" content="Description: There are a number of spherical balloons spread in two-dimensional space. For each balloon, provided input is the start and end coordinates of the horizontal diameter. Since it’s horizontal, y-coordinates don’t matter and hence the x-coordinates of start and end of the diameter suffice. Start is always smaller than end. There will be at most 10^4 balloons." />
+<link rel="canonical" href="http://localhost:4000/tech_blog/lc452/" />
+<meta property="og:url" content="http://localhost:4000/tech_blog/lc452/" />
+<meta property="og:site_name" content="Hengchang’s Tech Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-16T00:00:00-05:00" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/tech_blog/lc452/","headline":"LeetCode 452. Minimum Number of Arrows to Burst Balloons","dateModified":"2020-01-16T00:00:00-05:00","datePublished":"2020-01-16T00:00:00-05:00","author":{"@type":"Person","name":"Hengchang Hu"},"description":"Description: There are a number of spherical balloons spread in two-dimensional space. For each balloon, provided input is the start and end coordinates of the horizontal diameter. Since it’s horizontal, y-coordinates don’t matter and hence the x-coordinates of start and end of the diameter suffice. Start is always smaller than end. There will be at most 10^4 balloons.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/tech_blog/lc452/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+        <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta property="og:description" content="Description:
+There are a number of spherical balloons spread in two-dimensional space. For each balloon, provided input is the start and end coordinates of the horizontal diameter. Since it’s horizontal, y-coordinates don’t matter and hence the x-coordinates of start and end of the diameter suffice. Start is always smaller than end. There will be at most 10^4 balloons.
+
+" />
+    
+    <meta name="author" content="Hengchang's Tech Blog" />
+
+    
+    <meta property="og:title" content="LeetCode 452. Minimum Number of Arrows to Burst Balloons" />
+    <meta property="twitter:title" content="LeetCode 452. Minimum Number of Arrows to Burst Balloons" />
+    
+
+    
+    <meta property="og:image" content="http://localhost:4000"/>
+    <meta property="twitter:image" content="http://localhost:4000"/>
+    
+    <meta property="og:site_name" content="Amit Merchant - Software Engineer"/>
+
+
+    <link rel="stylesheet" type="text/css" href="/tech_blog/assets/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Hengchang's Tech Blog - Victory Loves Preparation." href="/tech_blog/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/lc452/" />
+
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/tech_blog/images/favicon-32x32.png">
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="/tech_blog/" class="site-avatar"><img src="/tech_blog" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/tech_blog/">Hengchang's Tech Blog</a></h1>
+              <p class="site-description">Victory Loves Preparation.</p> 
+            </div>
+
+            <nav>
+              <a href="/tech_blog/">Home</a>
+              <a href="/tech_blog/search">Search</a>
+              <a href="/tech_blog/about">About</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="post detailed">
+  <h1>LeetCode 452. Minimum Number of Arrows to Burst Balloons</h1>
+
+  <div>
+    <p class="author_title">Hengchang Hu  ·  January 16, 2020</p>
+    
+    <div class="post-tags">
+      
+      
+        <a href="/tech_blog/categories/#Greedy Algorithm">Greedy Algorithm</a>
+        
+      
+    </div>
+  </div>
+    
+  <div class="entry">
+    <h2 id="description">Description:</h2>
+<p>There are a number of spherical balloons spread in two-dimensional space. For each balloon, provided input is the start and end coordinates of the horizontal diameter. Since it’s horizontal, y-coordinates don’t matter and hence the x-coordinates of start and end of the diameter suffice. Start is always smaller than end. There will be at most <code class="language-plaintext highlighter-rouge">10^4</code> balloons.</p>
+
+<p>An arrow can be shot up exactly vertically from different points along the x-axis. A balloon with <code class="language-plaintext highlighter-rouge">x_start</code> and <code class="language-plaintext highlighter-rouge">x_end</code> bursts by an arrow shot at <code class="language-plaintext highlighter-rouge">x</code> if <code class="language-plaintext highlighter-rouge">x_start ≤ x ≤ x_end</code>. There is no limit to the number of arrows that can be shot. An arrow once shot keeps travelling up infinitely. The problem is to find the minimum number of arrows that must be shot to burst all balloons.</p>
+
+<h2 id="example">Example:</h2>
+<p>Input: <code class="language-plaintext highlighter-rouge">[[10,16],[2,8],[1,6],[7,12]]</code></p>
+
+<p>Output: <code class="language-plaintext highlighter-rouge">2</code></p>
+
+<h2 id="solution-explanation">Solution Explanation:</h2>
+<p>This is a little trickier than previous one. And there is a clear pattern for when will be a good time to consider using <strong>Greedy Algorithm</strong>, which is you are asking for minimize or maximize the number of something so that it can fit in some conditions and the input will be unsorted. For this specific problem, you should still consider the second element in a integer pair. If you sort the balloon array, make sure it is sorted by the second element of each balloon pair, then choosing the second element to shoot is locally optimal. The idea is:</p>
+
+<ol>
+  <li>
+    <p>Start from the first one (sorted array), make the second element as the shooting target.</p>
+  </li>
+  <li>Loop through the entire balloon array, if following elements are within the shooting range, keep the same shooting target, and continue the loop.</li>
+  <li>Until one balloon that is out of the shooting range, set the second element of that balloona a new shooting target, and add one to the number of shots.</li>
+  <li>Repeat until finish the loop.</li>
+</ol>
+
+<h2 id="solution">Solution:</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">findMinArrowShots</span><span class="p">(</span><span class="n">points</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">points</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="n">points</span><span class="p">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">curr</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">points</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">curr</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">curr</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">res</span>
+</code></pre></div></div>
+
+
+  </div>
+
+  <div>
+    <p><span class="share-box">Share:</span> <a href="http://twitter.com/share?text=LeetCode 452. Minimum Number of Arrows to Burst Balloons&url=http://localhost:4000/lc452/" target="_blank">Twitter</a>, <a href="https://www.facebook.com/sharer.php?u=http://localhost:4000/lc452/" target="_blank">Facebook</a></p>
+  </div>
+
+  <!--<div class="date">
+    Written on January 16, 2020
+  </div>-->
+
+  
+</article>
+
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            
+<a href="mailto:hengchang1223@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/hengchang1223"><i class="svg-icon github"></i></a>
+
+
+
+
+
+
+
+
+
+
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-43339302-11', 'auto');
+		ga('send', 'pageview', {
+		  'page': '/tech_blog/lc452/',
+		  'title': 'LeetCode 452. Minimum Number of Arrows to Burst Balloons'
+		});
+	</script>
+	<!-- End Google Analytics -->
+
+
+  </body>
+</html>
