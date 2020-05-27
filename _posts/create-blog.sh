@@ -8,7 +8,7 @@ read title
 # touch my-blog/_posts/$title
 touch $title
 STR1=$'---\nlayout: post\ntitle:  "LeetCode "'
-STR2=$'\ncategories: []\n---## Description:\n\n## Example:\n\n## Solution Explanation:\n\n## Solution:\n\n```python\n\n```'
+STR2=$'\ncategories: []\n---\n## Description:\n\n## Example:\n\n## Solution Explanation:\n\n## Solution:\n\n```python\n\n```'
 
 echo "${STR1} ${STR2}" >> $title
 code $title
