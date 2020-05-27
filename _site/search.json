@@ -2,8 +2,24 @@
   
     {
 
+      "title"    : "LeetCode 844. Backspace String Compare (April Challenge Day #9)",
+      "url"      : "/apr9/",
+      "category" : "April Challenge",
+      "date"     : "April  9, 2020"
+    } ,
+  
+    {
+
+      "title"    : "LeetCode 876. Middle of the Linked List (April Challenge Day #7)",
+      "url"      : "/apr8/",
+      "category" : "April Challenge",
+      "date"     : "April  8, 2020"
+    } ,
+  
+    {
+
       "title"    : "LeetCode Counting Elements (April Challenge Day #7)",
-      "url"      : "/tech_blog/apr7/",
+      "url"      : "/apr7/",
       "category" : "April Challenge",
       "date"     : "April  7, 2020"
     } ,
@@ -11,7 +27,7 @@
     {
 
       "title"    : "LeetCode 49. Group Anagrams (April Challenge Day #6)",
-      "url"      : "/tech_blog/apr6/",
+      "url"      : "/apr6/",
       "category" : "April Challenge",
       "date"     : "April  6, 2020"
     } ,
@@ -19,7 +35,7 @@
     {
 
       "title"    : "LeetCode 122. Best Time to Buy and Sell Stock II (April Challenge Day #5)",
-      "url"      : "/tech_blog/apr5/",
+      "url"      : "/apr5/",
       "category" : "April Challenge",
       "date"     : "April  5, 2020"
     } ,
@@ -27,7 +43,7 @@
     {
 
       "title"    : "LeetCode 283. Move Zeroes (April Challenge Day #4)",
-      "url"      : "/tech_blog/apr4/",
+      "url"      : "/apr4/",
       "category" : "April Challenge",
       "date"     : "April  4, 2020"
     } ,
@@ -35,7 +51,7 @@
     {
 
       "title"    : "LeetCode 53.  Maximum Subarray (April Challenge Day #3)",
-      "url"      : "/tech_blog/apr3/",
+      "url"      : "/apr3/",
       "category" : "April Challenge",
       "date"     : "April  3, 2020"
     } ,
@@ -43,7 +59,7 @@
     {
 
       "title"    : "LeetCode 202. Happy Number (April Challenge Day #2)",
-      "url"      : "/tech_blog/apr2/",
+      "url"      : "/apr2/",
       "category" : "April Challenge",
       "date"     : "April  2, 2020"
     } ,
@@ -51,7 +67,7 @@
     {
 
       "title"    : "LeetCode 136. Single Number (April Challenge Day #1)",
-      "url"      : "/tech_blog/apr1/",
+      "url"      : "/apr1/",
       "category" : "April Challenge",
       "date"     : "April  1, 2020"
     } ,
@@ -59,7 +75,7 @@
     {
 
       "title"    : "LeetCode 241. Different Ways to Add Parentheses",
-      "url"      : "/tech_blog/lc241/",
+      "url"      : "/lc241/",
       "category" : "Divide and Conquer",
       "date"     : "February  2, 2020"
     } ,
@@ -67,7 +83,7 @@
     {
 
       "title"    : "Binary Search",
-      "url"      : "/tech_blog/binary-search/",
+      "url"      : "/binary-search/",
       "category" : "",
       "date"     : "February  1, 2020"
     } ,
@@ -75,7 +91,7 @@
     {
 
       "title"    : "LeetCode 34. Find First and Last Position of Element in Sorted Array",
-      "url"      : "/tech_blog/lc34/",
+      "url"      : "/lc34/",
       "category" : "Binary Search",
       "date"     : "January 31, 2020"
     } ,
@@ -83,7 +99,7 @@
     {
 
       "title"    : "LeetCode 153. Find Minimum in Rotated Sorted Array",
-      "url"      : "/tech_blog/lc153/",
+      "url"      : "/lc153/",
       "category" : "Binary Search",
       "date"     : "January 30, 2020"
     } ,
@@ -91,7 +107,7 @@
     {
 
       "title"    : "LeetCode 278. First Bad Version",
-      "url"      : "/tech_blog/lc278/",
+      "url"      : "/lc278/",
       "category" : "Binary Search",
       "date"     : "January 29, 2020"
     } ,
@@ -99,7 +115,7 @@
     {
 
       "title"    : "LeetCode 540. Single Element in a Sorted Array",
-      "url"      : "/tech_blog/lc540/",
+      "url"      : "/lc540/",
       "category" : "Binary Search",
       "date"     : "January 28, 2020"
     } ,
@@ -107,7 +123,7 @@
     {
 
       "title"    : "LeetCode 744. Find Smallest Letter Greater Than Target",
-      "url"      : "/tech_blog/lc744/",
+      "url"      : "/lc744/",
       "category" : "Binary Search",
       "date"     : "January 27, 2020"
     } ,
@@ -115,7 +131,7 @@
     {
 
       "title"    : "LeetCode 69. Sqrt(x)",
-      "url"      : "/tech_blog/lc69/",
+      "url"      : "/lc69/",
       "category" : "Binary Search",
       "date"     : "January 26, 2020"
     } ,
@@ -123,7 +139,7 @@
     {
 
       "title"    : "Greedy Algorithm",
-      "url"      : "/tech_blog/greedy-algorithm/",
+      "url"      : "/greedy-algorithm/",
       "category" : "",
       "date"     : "January 25, 2020"
     } ,
@@ -131,7 +147,7 @@
     {
 
       "title"    : "LeetCode 763. Partition Labels",
-      "url"      : "/tech_blog/lc763/",
+      "url"      : "/lc763/",
       "category" : "Greedy Algorithm",
       "date"     : "January 24, 2020"
     } ,
@@ -139,7 +155,7 @@
     {
 
       "title"    : "LeetCode 53. Maximum Subarray",
-      "url"      : "/tech_blog/lc53/",
+      "url"      : "/lc53/",
       "category" : "Greedy Algorithm",
       "date"     : "January 23, 2020"
     } ,
@@ -147,7 +163,7 @@
     {
 
       "title"    : "LeetCode 665. Non-decreasing Array",
-      "url"      : "/tech_blog/lc665/",
+      "url"      : "/lc665/",
       "category" : "Greedy Algorithm",
       "date"     : "January 22, 2020"
     } ,
@@ -155,7 +171,7 @@
     {
 
       "title"    : "LeetCode 392. Is Subsequence",
-      "url"      : "/tech_blog/lc392/",
+      "url"      : "/lc392/",
       "category" : "Greedy Algorithm",
       "date"     : "January 21, 2020"
     } ,
@@ -163,7 +179,7 @@
     {
 
       "title"    : "LeetCode 605. Can Place Flowers",
-      "url"      : "/tech_blog/lc605/",
+      "url"      : "/lc605/",
       "category" : "Greedy Algorithm",
       "date"     : "January 20, 2020"
     } ,
@@ -171,7 +187,7 @@
     {
 
       "title"    : "LeetCode 122. Best Time to Buy and Sell Stock II",
-      "url"      : "/tech_blog/lc122/",
+      "url"      : "/lc122/",
       "category" : "Greedy Algorithm",
       "date"     : "January 19, 2020"
     } ,
@@ -179,7 +195,7 @@
     {
 
       "title"    : "LeetCode 121. Best Time to Buy and Sell Stock",
-      "url"      : "/tech_blog/lc121/",
+      "url"      : "/lc121/",
       "category" : "Greedy Algorithm",
       "date"     : "January 18, 2020"
     } ,
@@ -187,7 +203,7 @@
     {
 
       "title"    : "LeetCode 406. Queue Reconstruction by Height",
-      "url"      : "/tech_blog/lc406/",
+      "url"      : "/lc406/",
       "category" : "Greedy Algorithm",
       "date"     : "January 17, 2020"
     } ,
@@ -195,7 +211,7 @@
     {
 
       "title"    : "LeetCode 452. Minimum Number of Arrows to Burst Balloons",
-      "url"      : "/tech_blog/lc452/",
+      "url"      : "/lc452/",
       "category" : "Greedy Algorithm",
       "date"     : "January 16, 2020"
     } ,
@@ -203,7 +219,7 @@
     {
 
       "title"    : "LeetCode 435. Non-overlapping Intervals",
-      "url"      : "/tech_blog/lc435/",
+      "url"      : "/lc435/",
       "category" : "Greedy Algorithm",
       "date"     : "January 15, 2020"
     } ,
@@ -211,7 +227,7 @@
     {
 
       "title"    : "LeetCode 455. Assign Cookies",
-      "url"      : "/tech_blog/lc455/",
+      "url"      : "/lc455/",
       "category" : "Greedy Algorithm",
       "date"     : "January 14, 2020"
     } ,
@@ -219,7 +235,7 @@
     {
 
       "title"    : "Sorting",
-      "url"      : "/tech_blog/sorting/",
+      "url"      : "/sorting/",
       "category" : "",
       "date"     : "January 13, 2020"
     } ,
@@ -227,7 +243,7 @@
     {
 
       "title"    : "LeetCode 75. Sort Colors",
-      "url"      : "/tech_blog/lc75/",
+      "url"      : "/lc75/",
       "category" : "Sorting",
       "date"     : "January 12, 2020"
     } ,
@@ -235,7 +251,7 @@
     {
 
       "title"    : "LeetCode 451. Sort Characters By Frequency",
-      "url"      : "/tech_blog/lc451/",
+      "url"      : "/lc451/",
       "category" : "Sorting",
       "date"     : "January 11, 2020"
     } ,
@@ -243,7 +259,7 @@
     {
 
       "title"    : "LeetCode 347. Top K Frequent Elements",
-      "url"      : "/tech_blog/lc347/",
+      "url"      : "/lc347/",
       "category" : "Sorting",
       "date"     : "January 10, 2020"
     } ,
@@ -251,7 +267,7 @@
     {
 
       "title"    : "LeetCode 215. Kth Largest Element in an Array",
-      "url"      : "/tech_blog/lc215/",
+      "url"      : "/lc215/",
       "category" : "Sorting",
       "date"     : "January  9, 2020"
     } ,
@@ -259,7 +275,7 @@
     {
 
       "title"    : "Two Pointers",
-      "url"      : "/tech_blog/two-pointers/",
+      "url"      : "/two-pointers/",
       "category" : "",
       "date"     : "January  8, 2020"
     } ,
@@ -267,7 +283,7 @@
     {
 
       "title"    : "LeetCode 524. Longest Word in Dictionary through Deleting",
-      "url"      : "/tech_blog/lc524/",
+      "url"      : "/lc524/",
       "category" : "Two Pointers",
       "date"     : "January  7, 2020"
     } ,
@@ -275,7 +291,7 @@
     {
 
       "title"    : "LeetCode 141. Linked List Cycle",
-      "url"      : "/tech_blog/lc141/",
+      "url"      : "/lc141/",
       "category" : "Two Pointers",
       "date"     : "January  6, 2020"
     } ,
@@ -283,7 +299,7 @@
     {
 
       "title"    : "LeetCode 88. Merge Sorted Array",
-      "url"      : "/tech_blog/lc88/",
+      "url"      : "/lc88/",
       "category" : "Two Pointers",
       "date"     : "January  5, 2020"
     } ,
@@ -291,7 +307,7 @@
     {
 
       "title"    : "LeetCode 680. Valid Palindrome II",
-      "url"      : "/tech_blog/lc680/",
+      "url"      : "/lc680/",
       "category" : "Two Pointers",
       "date"     : "January  4, 2020"
     } ,
@@ -299,7 +315,7 @@
     {
 
       "title"    : "LeetCode 345. Reverse Vowels of a String",
-      "url"      : "/tech_blog/lc345/",
+      "url"      : "/lc345/",
       "category" : "Two Pointers",
       "date"     : "January  3, 2020"
     } ,
@@ -307,7 +323,7 @@
     {
 
       "title"    : "LeetCode 633. Sum of Square Numbers",
-      "url"      : "/tech_blog/lc633/",
+      "url"      : "/lc633/",
       "category" : "Two Pointers",
       "date"     : "January  2, 2020"
     } ,
@@ -315,7 +331,7 @@
     {
 
       "title"    : "LeetCode 167. Two Sum II - Input array is sorted",
-      "url"      : "/tech_blog/lc167/",
+      "url"      : "/lc167/",
       "category" : "Two Pointers",
       "date"     : "January  1, 2020"
     } 
