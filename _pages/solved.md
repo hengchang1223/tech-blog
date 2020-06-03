@@ -9,7 +9,7 @@ title: Solved
 
 
 <table style="border:1px solid black;margin-left:auto;margin-right:auto;">
-{% tablerow post in posts cols: 6 %}
+{% tablerow post in posts cols: 5 %}
   <a href="{{ site.baseurl }}{{ post.url }}">{{post.lcid}}</a>
 {% endtablerow %}
 </table>
