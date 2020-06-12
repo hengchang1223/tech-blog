@@ -3,4 +3,4 @@ layout: post
 title:  "Realtime Tic Tac Toe"
 ---
 
-tic-tac-toe-realtime.netlify.app
+[Click to play](tic-tac-toe-realtime.netlify.app)
